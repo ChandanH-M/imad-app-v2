@@ -22,7 +22,7 @@ app.get('/article-1',function(req,res)
 });
 app.get('/article-2',function(req,res)
 {
-    res.send('article two is created here');
+     res.sendFile(path.join(__dirname, 'ui', 'article-2.html'));
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
