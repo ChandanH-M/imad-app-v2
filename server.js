@@ -5,6 +5,73 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var article1 = {
+    title: 'Article 1 Chandan',
+    headiing: 'Article 1',
+    date: '29 June',
+    content: `  <p>
+            This is my first aritcle This is my first article  This is my first aritcle This is my first article
+             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
+              This is my first aritcle This is my first article This is my first aritcle This is my first article
+             </p>
+       
+            <p>
+            This is my first aritcle This is my first article  This is my first aritcle This is my first article
+             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
+              This is my first aritcle This is my first article This is my first aritcle This is my first article
+             </p>
+       
+            <p>
+            This is my first aritcle This is my first article  This is my first aritcle This is my first article
+             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
+              This is my first aritcle This is my first article This is my first aritcle This is my first article
+             </p>`
+             };
+function createTemplate(data)
+{
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+var template = 
+    `<html>
+    <head>
+        <title>${title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            .container{
+           max-width: 800px;
+            font-family: sans-serif;
+            margin: 0 auto;
+            color: #7d7777;
+            padding-top: 60px;
+            padding-left: 20px;
+            padding-right: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <a href='/'>Home</a>
+            </div>
+            <hr/>
+        <div>
+            ${title}
+        </div>
+        <div>
+           ${date}
+        </div>
+        <div>
+          ${content}
+       </div>
+    </div>    
+    </body>
+</html>`;
+return template;
+    
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -18,7 +85,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 app.get('/article-1',function(req,res)
 {
-     res.sendFile(path.join(__dirname, 'ui', 'article-1.html'));
+     res.send(createTemplate(article1));
 });
 app.get('/article-2',function(req,res)
 {
