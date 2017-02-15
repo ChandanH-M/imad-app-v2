@@ -6,73 +6,86 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-    'article-one': {
-    title: 'Article 1 Chandan',
-    heading: 'Article 1',
-    date: '29 June',
-    content: `  <p>
-            This is my first aritcle This is my first article  This is my first aritcle This is my first article
-             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
-              This is my first aritcle This is my first article This is my first aritcle This is my first article
-             </p>
-       
-            <p>
-            This is my first aritcle This is my first article  This is my first aritcle This is my first article
-             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
-              This is my first aritcle This is my first article This is my first aritcle This is my first article
-             </p>
-       
-            <p>
-            This is my first aritcle This is my first article  This is my first aritcle This is my first article
-             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
-              This is my first aritcle This is my first article This is my first aritcle This is my first article
-             </p>`
-             },
-    'article-two': {
-         title: 'Article 2 Chandan',
-    heading: 'Article 2',
-    date: '30 June',
-    content: `  <p>
-            This is my first aritcle This is my first article  This is my first aritcle This is my first article
-             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
-              This is my first aritcle This is my first article This is my first aritcle This is my first article
-             </p>
-       
-            <p>
-            This is my first aritcle This is my first article  This is my first aritcle This is my first article
-             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
-              This is my first aritcle This is my first article This is my first aritcle This is my first article
-             </p>
-       
-            <p>
-            This is my first aritcle This is my first article  This is my first aritcle This is my first article
-             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
-              This is my first aritcle This is my first article This is my first aritcle This is my first article
-             </p>`
+            'article-one': {
+                title: 'Article 1 Chandan',
+                heading: 'Article 1',
+                date: '29 June',
+                content: ` 
+                      <p>
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article
+                        </p>
+               
+                        <p>
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article
+                        
+                        </p>
+               
+                        <p>
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article
+                        </p>`
+                     },
+         'article-two': {
+                 title: 'Article 2 Chandan',
+                heading: 'Article 2',
+                date: '30 June',
+                content: `
+                        <p>
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article
+                        </p>
+               
+                        <p>
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article
+                        
+                        </p>
+               
+                        <p>
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article
+                        </p>`
     },
     'article-three': {
-        
-         title: 'Article 3 Chandan',
-    heading: 'Article 3',
-    date: '31 June',
-    content: `  <p>
-            This is my first aritcle This is my first article  This is my first aritcle This is my first article
-             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
-              This is my first aritcle This is my first article This is my first aritcle This is my first article
-             </p>
-       
-            <p>
-            This is my first aritcle This is my first article  This is my first aritcle This is my first article
-             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
-              This is my first aritcle This is my first article This is my first aritcle This is my first article
-             </p>
-       
-            <p>
-            This is my first aritcle This is my first article  This is my first aritcle This is my first article
-             This is my first aritcle This is my first article  This is my first aritcle This is my first article  This is my first aritcle This is my first article
-              This is my first aritcle This is my first article This is my first aritcle This is my first article
-             </p>`
-    }
+          title: 'Article 3 Chandan',
+          heading: 'Article 3',
+          date: '31 June',
+          content: ` <p>
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article
+                        </p>
+               
+                        <p>
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article
+                        
+                        </p>
+               
+                        <p>
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article  This is my first aritcle This is my first article
+                             This is my first aritcle This is my first article
+                        </p>`
+                }
              
 };
 
