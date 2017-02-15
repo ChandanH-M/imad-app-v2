@@ -1,7 +1,7 @@
 
-var button = document.getElementById('button1');
-var count = 0;
+var button = document.getElementById('counter');
 button.onclick = function() {
+    alert('hi');
   count = count + 1;
   var aaa = document.getElementById('counter');
   aaa.innerHTML = count.toString();
