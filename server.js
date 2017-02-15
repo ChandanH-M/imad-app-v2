@@ -34,7 +34,7 @@ var articles = {
                         </p>`
                      },
          'article-two': {
-                 title: 'Article 2 Chandan',
+                title: 'Article 2 Chandan',
                 heading: 'Article 2',
                 date: '30 June',
                 content: `
@@ -60,11 +60,12 @@ var articles = {
                              This is my first aritcle This is my first article
                         </p>`
     },
-    'article-three': {
-          title: 'Article 3 Chandan',
+     'article-three': {
+       //   title: 'Article 3 Chandan',
           heading: 'Article 3',
           date: '31 June',
-          content: ` <p>
+          content: `
+                        <p>
                              This is my first aritcle This is my first article  This is my first aritcle This is my first article
                              This is my first aritcle This is my first article  This is my first aritcle This is my first article
                              This is my first aritcle This is my first article  This is my first aritcle This is my first article
@@ -96,32 +97,34 @@ function createTemplate(data)
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-var template = 
-    `<html>
-    <head>
-        <title>${title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-               <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <a href='/'>Home</a>
-            </div>
-            <hr/>
-        <div>
-            ${title}
-        </div>
-        <div>
-           ${date}
-        </div>
-        <div>
-          ${content}
-       </div>
-    </div>    
-    </body>
-</html>`;
-return template;
+    var template = 
+            `<html>
+                 <head>
+                    <title>
+                        ${title}
+                    </title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                     <link href="/ui/style.css" rel="stylesheet" />
+                </head>
+                <body>
+                    <div class="container">
+                        <div>
+                            <a href='/'>Home</a>
+                        </div>
+                        <hr/>
+                        <div>
+                            ${title}
+                        </div>
+                        <div>
+                             ${date}
+                        </div>
+                        <div>
+                             ${content}
+                        </div>
+                        </div>    
+                </body>
+            </html>`;
+    return template;
     
 }
 
