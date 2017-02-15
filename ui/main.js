@@ -24,7 +24,7 @@ request.onreadystatechange = function () {
     };
     
     
-    var nameInput = document.getElementById('text');
+   
    
     var submit = document.getElementById('submit');
     
@@ -39,7 +39,7 @@ request.onreadystatechange = function () {
         if(request.status === 200) {
               var names = request.responseText;
               names = JSON.parse(names);
-               var value = nameInput.value;
+               
                     var list = '';
                              for (var i = 0; i < names.length; i++)
                              {
@@ -53,6 +53,8 @@ request.onreadystatechange = function () {
                 }
             }
         };
+    var nameInput = document.getElementById('text');
+    var value = nameInput.value;
     request.open('GET','http://chandanh-m.imad.hasura-app.io/submit-name?name=' + name,true);
     request.send(null);
     };
