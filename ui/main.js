@@ -55,7 +55,7 @@ request.onreadystatechange = function () {
         };
     var nameInput = document.getElementById('text');
     var value = nameInput.value;
-    request.open('GET','http://chandanh-m.imad.hasura-app.io/submit-name?name=' + name,true);
+    request.open('GET','http://chandanh-m.imad.hasura-app.io/submit-name?name=' + value,true);
     request.send(null);
     };
                   
