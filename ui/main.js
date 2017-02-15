@@ -33,6 +33,6 @@ request.onreadystatechange = function () {
       }
     };
     var ul = document.getElementById('ordered');
-    ul.innerHTMl = li;
+    ul.innerHTML = li;
     
 
