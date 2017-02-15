@@ -1,16 +1,6 @@
-console.log('Loaded!');
-var element = document.getElementById('text');
-element.innerHTML = "new value";
-var img = document.getElementById('madi');
-img.onclick = function()
-{
-    var interval = setInterval(moveRight, 60);
+var counter = 0;
+var counter = document.getElementById('counter');
+counter.onclick = function() {
+  counter = counter + 1;
+  counter.innerHTML = counter.toString();
 };
-var leftmargin = 0;
-function moveRight()
-{
-    leftmargin = leftmargin + 5;
-    img.style.marginLeft = leftmargin + "px";
-    
-    
-}
