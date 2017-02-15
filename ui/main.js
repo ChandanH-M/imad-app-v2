@@ -25,7 +25,7 @@ request.onreadystatechange = function () {
     
     
     var nameInput = document.getElementById('text');
-    var value = nameInput.value;
+   
     var submit = document.getElementById('submit');
     
     submit.onclick = function ()
@@ -39,6 +39,7 @@ request.onreadystatechange = function () {
         if(request.status === 200) {
               var names = request.responseText;
               names = JSON.parse(names);
+               var value = nameInput.value;
                     var list = '';
                              for (var i = 0; i < names.length; i++)
                              {
